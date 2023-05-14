@@ -43,5 +43,5 @@ git checkout master
 git branch -M master
 
 Подключаемся и загружаем содержимое основной ветки на удаленный репозиторий
-git remote add origin https://github.com/ducha2112/dz11.git
+git remote add origin https://github.com/ducha2112/dz.git
 git push -u origin master
