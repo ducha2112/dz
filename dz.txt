@@ -1,0 +1,47 @@
+Задание.
+Создайте новый проект и подключите в него Git через терминал. Укажите, что в вашем проекте будут игнорироваться все файлы с расширением .sass и папки: bin, admin, config.
+
+Выполните следующее:
+
+добавьте все файлы в локальное хранилище;
+создайте новую ветку и перейдите в неё;
+в новой ветке создайте папку blog с файлами: index.js, index.html;
+загрузите на удаленный репозиторий лишь основную ветку вашего проекта.
+
+Решение.
+Для подключения выполняем команды в терминале:
+git init
+git config --global user.name 'ducha2112'
+git config --global user.email 'ducha2112@yandex.ru'
+
+Создаем в проекте файл style.sass и папки bin, admin, config 
+Дополнительно создаем файлы main.html,main.js, main.css для наглядности
+Создаем в проекте файл .gitignore и прописываем в нем:
+*.sass
+/bin
+/admin
+/config
+
+Добавляем все файлы в локальное хранилище:
+git add .
+git commit -m 'new project added'
+
+Создаем новую ветку:
+git branch blog
+git checkout blog
+
+Создаем в новой ветке папку blog с файлами: index.js, index.html
+Коммитим
+git add .
+git commit -m 'new directory blog and files index.js, index.html'
+
+Переходим в основную ветку:
+git checkout master
+
+Создаем удаленный репозиторий
+Устанавливаем название основной ветки:
+git branch -M master
+
+Подключаемся и загружаем содержимое основной ветки на удаленный репозиторий
+git remote add origin https://github.com/ducha2112/dz11.git
+git push -u origin master
